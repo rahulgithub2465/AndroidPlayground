@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "188001450726",
+    "firebase_url": "https://playground-61fff.firebaseio.com",
+    "project_id": "playground-61fff",
+    "storage_bucket": "playground-61fff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188001450726:android:7cea85db6041d2e3",
+        "android_client_info": {
+          "package_name": "com.rahul.playground"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188001450726-u3qumc8fpgo2t3bjkj2n3offld3qh5to.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6tdnOlnEFEBYJZ6JriJjfbS3YapuDz1k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
