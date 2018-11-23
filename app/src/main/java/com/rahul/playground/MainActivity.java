@@ -1,30 +1,31 @@
 package com.rahul.playground;
 
+import android.databinding.Observable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
+import com.rahul.playground.permissionCheck.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button crashButton = new Button(this);
-        crashButton.setText("Crash!");
-        crashButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Crashlytics.getInstance().crash(); // Force a crash
+        checkPermissions();
+        isPermissionsGranted.addOnPropertyChangedCallback(new Observable.OnPropertyChangedCallback() {
+            @Override
+            public void onPropertyChanged(Observable sender, int propertyId) {
+                if (isPermissionsGranted.get()) {
+                    isPermissionsGranted.set(false);
+                    Toast.makeText(MainActivity.this, "Permissions Granted!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
-        addContentView(crashButton,
-                new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT));
     }
-
 }
 

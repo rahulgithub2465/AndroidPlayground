@@ -19,8 +19,9 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.rahul.playground.R;
+import com.rahul.playground.permissionCheck.BaseActivity;
 
-public class SMSActivity extends FragmentActivity {
+public class SMSActivity extends BaseActivity {
 
     private int RESOLVE_HINT = 1001;
     private int RC_PHONE_HINT = 1002;

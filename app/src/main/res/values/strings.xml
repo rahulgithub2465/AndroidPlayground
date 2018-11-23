@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Playground</string>
+    <string name="grant">Grant</string>
+    <string name="permissions_message">Some applications features may not work, Grant all permissions??</string>
+    <string name="permissions_dialog_title">Permissions Dialog</string>
+    <string name="close_app">Exit</string>
 </resources>
